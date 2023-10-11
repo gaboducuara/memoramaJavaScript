@@ -39,9 +39,9 @@ class Memorama {
         this.totalTargetas.forEach( card => {
             html += `<div class="targeta">
                         <img class="tarjeta-img" src=${card.src} alt="imagen memorama">
-                    </div>`;
+                    </div>`; 
         })
-        this.$contenedorTargetas.innerHTML = html
+        this.$contenedorTargetas.innerHTML = html;
     }
 }
 
