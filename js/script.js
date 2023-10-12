@@ -1,16 +1,16 @@
 class Memorama {
     
     constructor() {
-        this.totalTargetas = [];  //total targetas
-        this.numeroTargetas = 0;
-        this.verificadorTargetas = [];
+        this.totalTarjetas = [];  //total targetas
+        this.numeroTarjetas = 0;
+        this.verificadorTarjetas = [];
         this.errores = 0;
         this.nivelDificultad = "";
         this.imagenesCorrectas = [];
-        this.agregadorTargetas = [];
+        this.agregadorTarjetas = [];
 
         this.$contenedorGeneral = document.querySelector('.contenedor-general');
-        this.$contenedorTargetas = document.querySelector('.contenedor-targetas');
+        this.$contenedorTarjetas = document.querySelector('.contenedor-tarjetas');
         this.$pantallaBloqueada = document.querySelector('.pantalla-bloqueada')
         this.$mensaje = document.querySelector('h2.mensaje');
         //llamado a los eventos
@@ -26,22 +26,23 @@ class Memorama {
     async cargaPantalla() {
         const respuesta = await fetch('../memo.json')
         const data = await respuesta.json();
-        this.totalTargetas = data;
-        if (this.totalTargetas.length > 0) {
-            this.totalTargetas.sort(orden);
+        this.totalTarjetas = data;
+        if (this.totalTarjetas.length > 0) {
+            this.totalTarjetas.sort(orden);
             function orden(a , b ) {
                 return Math.random() - 0.5;
             }
         }
-        this.numeroTargetas = this.totalTargetas.length;
+        this.numeroTarjetas = this.totalTarjetas.length;
 
         let html = '';
-        this.totalTargetas.forEach( card => {
-            html += `<div class="targeta">
+        this.totalTarjetas.forEach( card => {
+            html += `<div class="tarjeta">
                         <img class="tarjeta-img" src=${card.src} alt="imagen memorama">
                     </div>`; 
         })
-        this.$contenedorTargetas.innerHTML = html;
+        this.$contenedorTarjetas.innerHTML = html;
+        console.log(html)
     }
 }
 
