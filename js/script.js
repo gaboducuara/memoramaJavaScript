@@ -38,7 +38,7 @@ class Memorama {
             this.nivelDificultad = 'Intermedio';
         } else {
             if (mensaje.toLowerCase() === 'facil' || mensaje.toLowerCase() === 'fácil') {
-                this.numeroIntentos = 11;
+                this.numeroIntentos = 2;
                 this.nivelDificultad = 'fácil';
             } else if (mensaje.toLowerCase() === 'intermedio') {
                 this.numeroIntentos = 8;
