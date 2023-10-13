@@ -1,7 +1,6 @@
 # Memomara JavaScript 
 
-A Ecommerce Website made with React.js Framework.
-Application that takes you into the world of pokémon. more than 50 varieties, with their respective types.
+Memorama JavaScript is a game to memorize with cards alluding to programming languages, it has three levels, easy, intermediate and difficult. hope you like it !
 
 ## Demo
 https://memorama-javascript.netlify.app/
